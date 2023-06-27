@@ -1,0 +1,73 @@
+
+  
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set a background color and font styles */
+  body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+  }
+  .about-section {
+    text-align: center;
+  }
+  
+  
+  /* Center align the content */
+  section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-decoration: underline;
+  }
+  
+  h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .car-types {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .car-type {
+    width: 48%;
+    margin-bottom: 20px;
+  }
+  
+  .car-type h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .car-type img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .car-type p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+ 
+  
+  .footer-bottom p {
+    margin: 0;
+  }
+  
+  /* Add any additional styles or modifications as needed */
+  

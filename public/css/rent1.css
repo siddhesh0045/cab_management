@@ -1,0 +1,58 @@
+.form-group {
+  margin-bottom: 20px;
+}
+.nav-link{
+  color: white;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+select,
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #263238;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.rent-now:hover{
+  background-color: #0a0a0a;
+  color: white;
+}
+.reset-rent-now:hover {
+  background-color: #0a0a0a;
+  color: white;
+}
+
+/* Additional styles for better visual appearance */
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.rent-insrtuction{
+
+  color: #263238;
+  margin-top: 2%;
+  font-weight: bold;
+  font-size: larger;
+  /* color: red; */
+  text-align: center;
+}

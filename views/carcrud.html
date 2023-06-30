@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css
+    ">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    
+        <link rel="stylesheet" type="text/css" href="/css/home.css">
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js
+    " defer></script>
+    <style>
+        body{
+	background-color: #cce6ff;
+}
+header{
+	text-align: center;
+	height: 100px;
+	padding-top: 1px;
+	background-color: #3399ff;
+	color: #FFFFFF;
+	font-size: x-large;
+}
+
+
+h3{
+	margin-top: 2px;
+	text-align: center;
+	background-color: #80bfff;
+}
+
+form{
+	width: 45%;
+	display: inline-block;
+	margin: 20px;
+}
+
+footer{
+	margin-top: 3%;
+	text-align: center;
+}
+    </style>
+    
+    
+        <title>update</title>
+    </head>
+<body>
+
+    <header>
+		<h1>Cars Database</h1>
+	</header>
+
+
+
+	<form action="/addcar" method="POST">
+		<fieldset>
+				<h3>Add new Car</h3>
+                <div class="form-group">
+                    <label for="type_id">Number Of seats:</label>
+                    <select id="type_id" name="type_id">
+                      <option value="4">4-seater</option>
+                      <option value="5">5-seater</option>
+                      <option value="6">6-seater</option>
+                      <option value="7">7-seater</option>
+                    </select>
+                  </div>
+                 <br>
+                <label>Reg_number: </label>
+				<input type="text" id = "Reg_number" name="Reg_number" placeholder="Enter_the_reg_number" required>
+				<br><br>
+                <label>Color: </label>
+				<input type="text" id = "color" name="color" placeholder="color" required>
+				<br><br>
+
+				<button type ="reset">Reset</button>
+				<button type ="submit">Add</button>
+		</fieldset>
+	</form>
+
+
+    <form action="/updatecar" method="POST">
+		<fieldset>
+				<h3>Update a Car</h3>
+				<label>Car Id: </label> 
+                  
+				<input type ="text" id = 'Car_id' name="Car_id" placeholder="Enter_car_id" required>
+				<br><br>
+                
+                <div class="form-group">
+                    <label for="type_id">Number Of seats:</label>
+                    <select id="type_id" name="type_id">
+                      <option value="-1">Select</option>
+                      <option value="4">4-seater</option>
+                      <option value="5">5-seater</option>
+                      <option value="6">6-seater</option>
+                      <option value="7">7-seater</option>
+                    </select>
+                  </div>
+                 <br>
+
+                <label>New Reg_number: </label>
+				<input type="text" id = "UReg_number" name="UReg_number" placeholder="Enter_the_reg_number" required>
+				<br><br>
+                <label>New Color: </label>
+				<input type="text" id = "UColor" name="Ucolor" placeholder="color" required>
+				<br><br>
+                <div class="form-group">
+                    <label for="car-type">Avaibility : </label>
+                    <select id="car-type" name="present">
+                        <option value="-1">Select</option>
+                        <option value="1">Available</option>
+                        <option value="0">Not Available</option>
+                      
+                    </select>
+                  </div>
+				<button type ="reset">Reset</button>
+				<button type ="submit">Update</button>
+		</fieldset>
+	</form>
+	
+	
+	<form action="/deletecar" method="POST">
+		<fieldset>
+				<h3>Delete a car</h3>
+				<label>Car Id: </label>
+				<input type ="text" id = 'vcar_id' name="vcar_id" placeholder="Enter_car_id" required>
+				<br><br>
+
+				<button type ="reset">Reset</button>
+				<button type ="submit">Submit</button>
+				<br><br><br>
+		</fieldset>
+	</form>
+    <script>
+        // Set default values for the fields if they are empty
+        const URegNumberField = document.getElementById("UReg_number");
+        if (!URegNumberField.value) {
+          URegNumberField.value = " ";
+        }
+      
+        const UColorField = document.getElementById("UColor");
+        if (!UColorField.value) {
+          UColorField.value = " ";
+        }
+      </script>
+</body>
+</html>

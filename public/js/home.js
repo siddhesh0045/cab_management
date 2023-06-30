@@ -35,15 +35,6 @@ loginBtn.addEventListener("click", (e) => {
 
 
 
-// slideshow
-var typed = new Typed("#multi",{
-  strings: [,  "Student !","Problem Solver !","Web Developer !"] ,
-  typeSpeed: 50,
-  backSpeed: 100,
-  loop: true
-
-  })
-
 
 
 

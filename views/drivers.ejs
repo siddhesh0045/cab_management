@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Drivers List</title>
+</head>
+<body>
+    <h1>Resistered information</h1>
+    <table border="1" width="100%">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>License</th>
+            <th>Language</th>
+            <th>present</th>
+            <th>operations</th>
+            <th>edit</th>
+          </tr>
+          
+       
+            <% for(var i=0;i<students.length;i++){ %>
+                    <tr>
+                        <td><%- students[i].id %> </td>
+                        <td><%- students[i].dr_name %> </td>
+                        <td><%- students[i].licence %> </td>
+                        <td><%- students[i].lan %> </td>
+                        <td><%- students[i].present %> </td>
+                        <td>
+                            <form action="Deleted" method="post">
+                            <button type="submit">Delete</button>
+                           </form>
+                        </td>
+                        <td>
+                            <form action="Deleted" method="post">
+                            <button type="submit">edit</button>
+                           </form>
+                        </td>
+                    </tr>
+            <% } %>
+         
+        
+             
+    </table>
+    
+</body>
+</html>

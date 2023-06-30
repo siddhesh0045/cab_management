@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>cars List</title>
+</head>
+<body>
+    <h1>Resistered information</h1>
+    <table border="1" width="100%">
+          <tr>
+            <th>id</th>
+            <th>type_id</th>
+            <th>reg_num</th>
+            <th>color</th>
+            <!-- <th>edit</th> -->
+            
+          </tr>
+                
+       
+            <% for(var i=0;i<car.length;i++){ %>
+                    <tr>
+                        <td><%- car[i].car_id%> </td>
+                        <td><%- car[i].type_id %> </td>
+                        <td><%- car[i].registration_number %> </td>
+                        <td><%- car[i].color %> </td>
+                       
+                    </tr>
+            <% } %>
+         
+        
+             
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!-- confirmation.ejs -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+  <title>Confirmation Page</title>
+  <style>
+    .head {
+      text-align: center;
+      color: white;
+      background-color: #63b0d7;
+      box-shadow: 20px 20px 50px grey;
+      margin-top: 3%;
+      margin-bottom: 3%;
+      padding: 1%;
+    }
+   
+
+    .grid-container {
+
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0 auto;
+      /* Center horizontally */
+      max-width: 800px;
+      /* Set a maximum width for the container */
+      padding: 0 10px;
+    }
+
+    .grid-item {
+      border-left: 1px solid #131313;
+      border-bottom: 1px solid #131313;
+      padding: 5px;
+      /* text-align: center; */
+    }
+
+    .grid-item:hover {
+      border-bottom: 2px solid #0b0044;
+    }
+
+    .grid-heading {
+      background-color: #3d5663;
+      color: white;
+      padding: 6px;
+      text-align: center;
+      grid-column: 1 / -1;
+      font-weight: 700;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 2%;
+
+    }
+   
+    #button1, #button2{
+      margin:9px;
+      padding: 10px;
+      background-color: #3d5663;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  color: white;
+  
+  text-decoration: none;
+      margin:9px;
+      padding: 10px;
+
+    }
+    #button1:hover, #button2:hover{
+      box-shadow: 10px 10px 30px grey;
+  background-color: #000000;
+  color: rgb(218, 249, 255);
+
+    }
+    
+
+  
+
+    @media print {
+      #button1 {
+        display: none;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+  <div class="head">
+    <h1>Confirmation</h1>
+  </div>
+  <section class="pdf">
+  
+</section>
+  <div class="grid-container">
+    <div class="grid-heading" colspan="2">Personal Information</div>
+    <div class="grid-item">User Name</div>
+    <div class="grid-item">
+      <%= user.name%>
+    </div>
+    <div class="grid-item">Mobile Number</div>
+    <div class="grid-item">
+      <%= user.mobno %>
+    </div>
+    <div class="grid-heading" colspan="2">Car Information</div>
+    <div class="grid-item">Car Type</div>
+    <div class="grid-item">
+      <%= car.type_id %>
+    </div>
+    <div class="grid-item">Color</div>
+    <div class="grid-item">
+      <%= car.color %>
+    </div>
+    <div class="grid-item">Car Number</div>
+    <div class="grid-item">
+      <%= car.registration_number %>
+    </div>
+    <div class="grid-heading" colspan="2">Driver Information</div>
+    <div class="grid-item">Driver Name</div>
+    <div class="grid-item">
+      <%= driver.dr_name %>
+    </div>
+    <div class="grid-item">Driver License Number</div>
+    <div class="grid-item">
+      <%= driver.licence %>
+    </div>
+    <div class="grid-item">Driver Language</div>
+    <div class="grid-item">
+      <%= driver.lan %>
+    </div>
+    <div class="grid-heading" colspan="2">Rout Info</div>
+    <div class="grid-item">Starting Point</div>
+    <div class="grid-item">
+      <%= starting %>
+    </div>
+    <div class="grid-item">Destination</div>
+    <div class="grid-item">
+      <%= ending %>
+    </div>
+    <div class="grid-heading" colspan="2">Cost Of Journay</div>
+    <div class="grid-item">Total Cost(In Rupees)</div>
+    <div class="grid-item">
+      <%= price %>
+    </div>
+
+
+  </div>
+  
+
+  <form action="/confirm" method="post">
+    <div class="buttons">
+      <button onclick="downloadAsPDF()" type="button" id="button1">Download as PDF</button>
+    <button type="submit" id="button2">Confirm!!</button>
+      </div>
+  </form>
+
+
+  <script>
+    function downloadAsPDF() {
+      const element = document.documentElement;
+      html2pdf().from(element).save("page.pdf");
+    }
+  </script>
+</body>
+
+</html>

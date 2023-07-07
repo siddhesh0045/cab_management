@@ -51,18 +51,18 @@ git clone https://github.com/siddhesh0045/cab_management.git
 ## Screenshots
 
 Here are some screenshots of the GoDrive web application:
-
-![Home Page](public/images/home.png)
 *Home Page of the GoDrive app*
+![Home Page](public/images/home_page.png)
 
-![Car Selection](car-selection.png)
 *Car selection page*
+![Car Selection](public/images/car_select.png)
 
-![Driver Selection](driver-selection.png)
-*Driver selection page*
+*Admin  Login page*
+![Driver Selection](public/images/admin_login.png)
 
-![Admin Panel](admin-panel.png)
 *Admin panel for managing cars and drivers*
+![Admin Panel](public/images/admin_page.png)
+
 
 Please note that these screenshots are for demonstration purposes and may not reflect the actual implementation.
 

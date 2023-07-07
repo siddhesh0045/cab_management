@@ -2,7 +2,7 @@
 .header {
     font-weight: bold;
 color: rgb(29, 51, 80);
-background-color: #eceff3;
+background-color: #63b0d7;
 color: #fff;
 padding: 20px;
 
@@ -20,7 +20,6 @@ text-align: center;
 /* Style the container */
  
 .container{
-max-width: 800px;
 margin: 20px auto;
 padding: 0 20px;
 }
@@ -29,8 +28,8 @@ padding: 0 20px;
 .buttons {
     display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 20px;
+  justify-content:space-around;
+  margin-top: 5%;
   }
 
 

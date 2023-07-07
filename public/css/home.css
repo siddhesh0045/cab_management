@@ -34,22 +34,15 @@ body{
    
 }
 /* this code is for .carousel */
-.carousel-item img{
-  opacity:0.9;
 
-}
 .carousel-caption {
   color:rgb(8, 8, 8);
-  text-shadow:
-    
-    0 0 80px #00aeff,
-    0 0 100px #00a6ff,
-    0 0 150px #00ffff;
+ 
   font-weight:900;
-  /* background-color: rgba(207, 207, 207, 0.8); */
-  /* border:0.1px  solid grey; */
-  /* border-radius: 30px; */
-  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+  background-color: rgba(207, 207, 207, 0.5);
+  border:0.1px  solid grey; 
+  border-radius: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .button{
@@ -251,7 +244,14 @@ body{
   color: rgb(218, 249, 255);
  
 }
-
+#form-open1{
+  background-color: black;
+  padding: 2%;
+}
+#form-open1:hover{
+  color:white;
+  background-color: #607d8b;
+}
 
 
 .footer-bottom{
@@ -259,7 +259,7 @@ body{
 text-align: center;
 background-color: #263238;
 /* margin-bottom:0%; */
-padding: 5px;
+padding: 12px;
 color: white;
 
 }

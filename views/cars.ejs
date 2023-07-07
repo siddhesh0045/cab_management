@@ -1,34 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>cars List</title>
+    <title>Cars List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+          background-color: #263238;
+            text-align: center;
+            color: white;
+            box-shadow: 10px 10px 30px grey;
+            padding: 3%;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+            box-shadow: 10px 10px 30px grey;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+          background-color: #d3f0ff;
+        }
+    </style>
 </head>
 <body>
-    <h1>Resistered information</h1>
-    <table border="1" width="100%">
-          <tr>
-            <th>id</th>
-            <th>type_id</th>
-            <th>reg_num</th>
-            <th>color</th>
-            <!-- <th>edit</th> -->
-            
-          </tr>
-                
-       
-            <% for(var i=0;i<car.length;i++){ %>
-                    <tr>
-                        <td><%- car[i].car_id%> </td>
-                        <td><%- car[i].type_id %> </td>
-                        <td><%- car[i].registration_number %> </td>
-                        <td><%- car[i].color %> </td>
-                       
-                    </tr>
-            <% } %>
-         
-        
-             
+    <!-- this is view car  -->
+    <h1>Registered Information</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Type ID</th>
+            <th>Registration Number</th>
+            <th>Color</th>
+        </tr>
+
+        <% for(var i=0; i<car.length; i++){ %>
+        <tr>
+            <td><%- car[i].car_id %></td>
+            <td><%- car[i].type_id %></td>
+            <td><%- car[i].registration_number %></td>
+            <td><%- car[i].color %></td>
+        </tr>
+        <% } %>
     </table>
-    
 </body>
 </html>

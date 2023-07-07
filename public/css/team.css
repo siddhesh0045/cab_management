@@ -9,12 +9,13 @@
 
 }
 .header{
-    
+    margin-top: 2%;
     text-align: center;
     padding: 10px;
-   
+   background-color: #63b0d7;
     margin-bottom: 10px;
-    color: #151313;
+    color: #033147;
+    box-shadow: 10px 10px 30px grey;
    
 
 

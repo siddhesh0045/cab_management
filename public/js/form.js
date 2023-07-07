@@ -1,4 +1,5 @@
-// form.js
+
+// this js file is used to take action when the comfirm button is pressed
 $(document).ready(() => {
     $('#rent-form').submit((e) => {
       e.preventDefault();

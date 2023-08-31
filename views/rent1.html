@@ -34,9 +34,6 @@
                         <a class="nav-link active" id="links" aria-current="page" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" id="links" aria-current="page" href="./rent1.html">Admin Login</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link active" id="links" aria-current="page" href="./about.html">About</a>
                     </li>
                     <li class="nav-item">
@@ -112,6 +109,7 @@
       
 
         
+      <br>
       
         <button type="submit" class="button rent-now">Rent Now</button>
         <button type="reset" class="button reset-rent-now"> Reset</button>
@@ -125,6 +123,34 @@
         </div>
     </footer>
       
-      
+      <script>
+        // Add this JavaScript code in your HTML file or a separate JavaScript file
+
+// Disable browser navigation when session variable is not available
+window.addEventListener('load', function() {
+  if (!sessionStorage.getItem('userEmail')) {
+    disableBrowserNavigation();
+  }
+});
+
+function disableBrowserNavigation() {
+  // Disable back/forward navigation
+  history.pushState(null, null, location.href);
+  window.addEventListener('popstate', handlePopstate);
+
+  // Disable right-click context menu
+  document.addEventListener('contextmenu', handleContextMenu);
+}
+
+function handlePopstate(event) {
+  // Restore the previous URL and prevent navigation
+  history.pushState(null, null, location.href);
+}
+
+function handleContextMenu(event) {
+  event.preventDefault();
+}
+
+      </script>
 </body>
 </html>

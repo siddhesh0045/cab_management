@@ -51,6 +51,7 @@
             <th>Type ID</th>
             <th>Registration Number</th>
             <th>Color</th>
+            <th>Availability</th>
         </tr>
 
         <% for(var i=0; i<car.length; i++){ %>
@@ -59,6 +60,8 @@
             <td><%- car[i].type_id %></td>
             <td><%- car[i].registration_number %></td>
             <td><%- car[i].color %></td>
+            <!-- <td><%- car[i].present %></td> -->
+            <td><%- car[i].present? 'Available' : 'Not Available' %></td>
         </tr>
         <% } %>
     </table>

@@ -44,12 +44,13 @@ router.get("/", (req, res) => {
       });
     });
   });
+  
 
   router.post("/login", (req, res) => {
     var email = req.body.email;
     var password = req.body.password;
   
-    console.log(req.body);
+    // console.log(req.body);
   
     con.connect((err) => {
       if (err) {
@@ -74,6 +75,16 @@ router.get("/", (req, res) => {
 res.send("wrong credentials");
         }
       });
+    });
+  });
+  router.get("/logout", (req, res) => {
+    // Clear the session and log out the user
+    req.session.destroy((err) => {
+      if (err) {
+        console.error("Error logging out:", err);
+      }
+      // Redirect the user to the home page
+      res.redirect("/views/index.html");
     });
   });
 

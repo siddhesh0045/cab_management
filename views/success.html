@@ -3,22 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css
+">
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
+  <link rel="stylesheet" type="text/css" href="/css/home.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js
+" defer></script>
   <title>Car Rent Success</title>
   <style>
+    h1{
+      color:rgb(12, 23, 48) ;
+      font-weight: bolder;
+
+    }
+   
     body {
+      background-position: center;
       font-family: Arial, Helvetica, sans-serif;
       text-align: center;
     }
     
     .success-message {
-      margin-top: 100px;
+      margin-top: 1%;
       font-size: 24px;
-      color: green;
+      font-weight: bolder;
+      color: rgb(0, 255, 0);
     }
+    .omk{
+      /* background-color: black; */
+     width: auto; 
+     height: min-content;
+      background-size: cover;
+    }
+    #logoutButton{
+      padding: 1%;
+      border: 1px solid black;
+      border-radius: 7px;
+      background-color: rgb(39, 78, 119);
+      color: white;
+      font-weight: 500;
+
+
+    }
+    #logoutButton:hover{
+      background-color: black;
+      font-weight: bolder;
+
+    }
+
   </style>
 </head>
 <body>
-  <h1>Car Rent Success</h1>
-  <p class="success-message">Thank you for renting a car! Your car rent is successful.</p>
+
+  <nav class="navbar navbar-expand-lg " data-bs-theme="dark" id="nav">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="./about.html">
+            <img src="/images/logo.png" alt="Bootstrap" width="40" height="40">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" id="links" aria-current="page" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" id="links" aria-current="page" href="/about.html">About</a>
+                </li>
+            </ul>
+
+            <!-- <button class="btn btn-outline-success button" id="form-open1" class="Get-started">Login</button> -->
+
+        </div>
+    </div>
+</nav>
+
+<div class="omk">
+  <h1>Car Rent Success !!!</h1>
+  <section >
+  
+<section class="image">
+  <img src="images/success.png"  width="300">
+</section>
+
+</div>
+<p class="success-message">Thank you for renting a car! Your car is ON THE WAY !</p>
+</section>
+
+<section class="logout">
+  <button id="logoutButton">Logout</button>
+</section>
+
+<footer>
+  <div class="footer-bottom">
+      <p>&copy; 2023 GoDrive. All rights reserved.</p>
+  </div>
+</footer>
+
+
+<script>
+  // Add an event listener to the logout button
+  document.getElementById("logoutButton").addEventListener("click", function() {
+    // Make a GET request to the logout route
+    fetch("/logout", {
+      method: "GET"
+    })
+    .then(response => {
+      // Redirect to the home page after logout
+      window.location.href = "/";
+    })
+    .catch(error => {
+      console.error("Error logging out:", error);
+    });
+  });
+</script>
+
 </body>
 </html>

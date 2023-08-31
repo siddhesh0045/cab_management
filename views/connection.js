@@ -1,7 +1,7 @@
 const { connect } = require('http2');
 const mysql = require('mysql2');
 var con = mysql.createConnection({
-    hot:'localhost',
+    host:'localhost',
     user:'root',
     password:'sup@098',
     database:'cab_management'

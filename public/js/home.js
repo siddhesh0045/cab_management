@@ -1,4 +1,4 @@
-const formOpenBtn = document.querySelector("#form-open1");
+const formOpenBtn = document.querySelector("#form-open1") ;
 
   home = document.querySelector(".home"),
   formContainer = document.querySelector(".form_container"),
@@ -32,7 +32,6 @@ loginBtn.addEventListener("click", (e) => {
   e.preventDefault();
   formContainer.classList.remove("active");
 });
-
 
 
 

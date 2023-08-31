@@ -34,6 +34,12 @@ app.use("/",user);
 app.use("/",admin);
 app.use("/",driver);
 app.use("/",cars);
+
+
+
+
+
+
 // confirmation msg that port is running
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

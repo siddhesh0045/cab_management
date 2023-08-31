@@ -56,7 +56,7 @@
 </head>
 <body>
     <!-- this is view dirver -->
-    <h1>Registered Information</h1>
+    <h1>Driver Information</h1>
     <table border="1">
         <tr >
             <th>ID</th>
@@ -72,7 +72,8 @@
             <td><%- students[i].dr_name %></td>
             <td><%- students[i].licence %></td>
             <td><%- students[i].lan %></td>
-            <td><%- students[i].present %></td>
+            <td><%- students[i].present ? 'Available' : 'Not Available' %></td>
+
             
         </tr>
         <% } %>

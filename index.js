@@ -11,16 +11,20 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "views")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+//This middleware is provided by Express and is specifically used to parse URL-encoded data, which is typically used when submitting form data.
 // use espress-session
 app.use(
   session({
     secret: "cab_management",
+    //Uses a secret key ("cab_management") to secure the session cookies.
     resave: false,
+    //Does not resave sessions that haven't been modified (resave: false).
     saveUninitialized: false,
+    //Does not save unmodified sessions to the store (saveUninitialized: false).
   })
 );
 app.set("view engine", "ejs");
-
+//The line app.set("view engine", "ejs"); is used to configure your Express.js application to use EJS (Embedded JavaScript) as its template engine for rendering views.
 //creater the routes for various purpose
 const port = 3000;
 const auth = require("./auth");

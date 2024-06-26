@@ -52,6 +52,7 @@
             <th>Registration Number</th>
             <th>Color</th>
             <th>Availability</th>
+            <th>Actions</th>
         </tr>
 
         <% for(var i=0; i<car.length; i++){ %>
@@ -62,6 +63,10 @@
             <td><%- car[i].color %></td>
             <!-- <td><%- car[i].present %></td> -->
             <td><%- car[i].present? 'Available' : 'Not Available' %></td>
+            <td>
+                <a href="/edit/<%= car[i].car_id %>">Update</a>
+                <a href="/delete/<%= car[i].car_id %>">Delete</a>
+            </td>
         </tr>
         <% } %>
     </table>
